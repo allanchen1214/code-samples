@@ -58,10 +58,10 @@ func find_two_distinct_numbers_XOR(arr []int) []int {
 	}
 
 	// 异或结果中，右起找到第一个为1的位position，则代表两个只出现一次的数字里，其中一个position位为0，另一个为1
-	// 这样能保证所有相同的数都被放到同一个数组，也能保证两个只出现一次的数分别放入到不同的数组
 	position := get1position(sum)
 
 	// 原数组拆分成两个数组，分别是所有position位为0的，以及所有position位为1的
+	// 这样能保证所有相同的数都被放到同一个数组，也能保证两个只出现一次的数分别放到不同的数组
 	arr0 := []int{}
 	arr1 := []int{}
 	for _, item := range arr {
